@@ -1,10 +1,39 @@
+#include "battery.h"
+
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "driver/adc.h"
+#include "esp_adc_cal.h"
 
 float batteryVoltage = 0.f;
 
 void vTaskBattery(void* pvParameters) {
-    // Setup pins
+    #if BATTERY_ADC_UNIT == ADC_UNIT_1
+        adc1_config_channel_atten(BATTERY_ADC_CHANNEL, ADC_ATTEN_DB_11);
+    #elif BATTERY_ADC_UNIT == ADC_UNIT_2
+        adc2_config_channel_atten(BATTERY_ADC_CHANNEL, ADC_ATTEN_DB_11);
+    #else
+        #error "Invalid ADC unit"
+    #endif
+
+    esp_adc_cal_characteristics_t adc_chars;
+    esp_adc_cal_characterize(BATTERY_ADC_UNIT, ADC_ATTEN_DB_11, ADC_WIDTH_BIT_DEFAULT, 0, &adc_chars);
 
     while (1) {
+        uint32_t raw_value = 0;
 
+        #if BATTERY_ADC_UNIT == ADC_UNIT_1
+            adc1_config_width(ADC_WIDTH_BIT_DEFAULT);
+            raw_value = adc1_get_raw(BATTERY_ADC_CHANNEL);
+        #elif BATTERY_ADC_UNIT == ADC_UNIT_2
+            adc2_config_width(ADC_WIDTH_BIT_DEFAULT);
+            raw_value = adc2_get_raw(BATTERY_ADC_CHANNEL);
+        #else
+            #error "Invalid ADC unit"
+        #endif
+
+        batteryVoltage = esp_adc_cal_raw_to_voltage(raw_value, &adc_chars) * VOLTAGE_DIVIDER_RATIO / 1000.f;
+
+        vTaskDelay(pdMS_TO_TICKS(100));
     }
 }
