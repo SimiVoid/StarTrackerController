@@ -1,4 +1,7 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+Makefile:8: /make/project.mk: No such file or directory
+make: *** No rule to make target '/make/project.mk'.  Stop.
+
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -6,7 +9,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jul 11 18:21:43 2022
+# Make data base, printed on Mon Jul 11 18:48:11 2022
 
 # Variables
 
@@ -25,7 +28,7 @@ AMENT_PREFIX_PATH = /opt/ros/humble
 # environment
 SNAP_INSTANCE_KEY = 
 # makefile (from 'Makefile', line 6)
-PROJECT_NAME := sample_project
+PROJECT_NAME := StarTrackerController
 # environment
 LC_NAME = pl_PL.UTF-8
 # environment
@@ -79,7 +82,7 @@ MAKEFLAGS = prR
 # makefile
 CURDIR := /home/simi/Documents/Projects/StarTrackerController
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # automatic
@@ -276,11 +279,8 @@ GDMSESSION = ubuntu
 LC_IDENTIFICATION = pl_PL.UTF-8
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
- 
-Makefile:8: /make/project.mk: No such file or directory
-make: *** No rule to make target '/make/project.mk'.  Stop.
-
 # variable set hash-table stats:
+ 
 # Load=133/1024=13%, Rehash=0, Collisions=11/160=7%
 
 # Pattern-specific Variable Values
@@ -289,9 +289,9 @@ make: *** No rule to make target '/make/project.mk'.  Stop.
 
 # Directories
 
-# . (device 2050, inode 922402): 8 files, no impossibilities.
+# . (device 2050, inode 922402): 9 files, no impossibilities.
 
-# 8 files, no impossibilities in 1 directories.
+# 9 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -302,7 +302,7 @@ make: *** No rule to make target '/make/project.mk'.  Stop.
 # Not a target:
 Makefile:
 #  Implicit rule search has not been done.
-#  Last modified 2022-07-11 18:21:38.905480417
+#  Last modified 2022-07-11 18:36:19.407329849
 #  File has not been updated.
 
 # Not a target:
@@ -332,12 +332,12 @@ all:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 14 / storage = 138 B / avg = 9 B
-# current buf: size = 8162 B / used = 138 B / count = 14 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 15 / storage = 143 B / avg = 9 B
+# current buf: size = 8162 B / used = 143 B / count = 15 / avg = 9 B
 
-# strcache performance: lookups = 19 / hit rate = 26%
+# strcache performance: lookups = 20 / hit rate = 25%
 # hash-table stats:
-# Load=14/8192=0%, Rehash=0, Collisions=0/19=0%
-# Finished Make data base on Mon Jul 11 18:21:43 2022
+# Load=15/8192=0%, Rehash=0, Collisions=0/20=0%
+# Finished Make data base on Mon Jul 11 18:48:11 2022
 
  

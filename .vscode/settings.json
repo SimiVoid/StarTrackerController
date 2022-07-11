@@ -9,5 +9,10 @@
         "target/esp32.cfg"
     ],
     "idf.pythonBinPath": "/home/simi/.espressif/python_env/idf4.4_py3.10_env/bin/python",
-    "idf.toolsPath": "/home/simi/.espressif"
+    "idf.toolsPath": "/home/simi/.espressif",
+    "files.associations": {
+        "freertos.h": "c",
+        "stdio.h": "c",
+        "stdlib.h": "c"
+    }
 }
