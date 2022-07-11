@@ -13,6 +13,7 @@
     "files.associations": {
         "freertos.h": "c",
         "stdio.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "buzzer.h": "c"
     }
 }
