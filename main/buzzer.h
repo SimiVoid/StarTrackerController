@@ -3,7 +3,7 @@
 
 #define BUZZER_PIN
 
-enum BuzzerMelody {
+enum buzzer_melody {
     BUZZER_MELODY_STARTUP = 0,
     BUZZER_MELODY_ENABLE_MOTOR,
     BUZZER_MELODY_DISABLE_MOTOR,

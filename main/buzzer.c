@@ -1,7 +1,7 @@
 #include "buzzer.h"
 
 void vTaskBuzzer(void* pvParameters) {
-    enum BuzzerMelody selected = (enum BuzzerMelody)pvParameters;
+    enum buzzer_melody selected = (enum buzzer_melody)pvParameters;
 
     switch (selected) {
         case BUZZER_MELODY_STARTUP:

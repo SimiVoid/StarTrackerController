@@ -1,7 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-Makefile:8: /make/project.mk: No such file or directory
-make: *** No rule to make target '/make/project.mk'.  Stop.
-
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -9,7 +6,7 @@ make: *** No rule to make target '/make/project.mk'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jul 11 18:48:11 2022
+# Make data base, printed on Tue Jul 12 14:36:09 2022
 
 # Variables
 
@@ -34,7 +31,7 @@ LC_NAME = pl_PL.UTF-8
 # environment
 LC_NUMERIC = pl_PL.UTF-8
 # environment
-VSCODE_CWD = /home/simi/Downloads
+VSCODE_CWD = /home/simi/Documents/Projects
 # environment
 LC_ADDRESS = pl_PL.UTF-8
 # default
@@ -70,19 +67,19 @@ VSCODE_CODE_CACHE_PATH = /home/simi/.config/Code/CachedData/92d25e35d9bf1a6b16f7
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.ZVPVO1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.37W4O1
 # default
 .LOADED := 
 # default
 .INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
 # environment
-GNOME_TERMINAL_SERVICE = :1.107
+GNOME_TERMINAL_SERVICE = :1.100
 # makefile
 MAKEFLAGS = prR
 # makefile
 CURDIR := /home/simi/Documents/Projects/StarTrackerController
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # automatic
@@ -108,13 +105,13 @@ SNAP_REEXEC =
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 18286
+VSCODE_PID = 6661
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/expertbook:@/tmp/.ICE-unix/2323,unix/expertbook:/tmp/.ICE-unix/2323
+SESSION_MANAGER = local/expertbook:@/tmp/.ICE-unix/1822,unix/expertbook:/tmp/.ICE-unix/1822
 # automatic
 *F = $(notdir $*)
 # environment
@@ -144,7 +141,9 @@ SHLVL = 1
 # environment
 PICO_SDK_PATH = /home/simi/raspberry-pi-pico/pico/pico-sdk
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/690bcaf1_69c5_4cc6_be5f_aacb04022e72
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/fc9d18c2_78b2_422d_8aa7_0a673e37516e
+# environment
+GCC_COLORS = error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01
 # environment
 MAKELEVEL := 0
 # default
@@ -152,7 +151,7 @@ MAKE = $(MAKE_COMMAND)
 # environment
 SNAP_COOKIE = 3BuS1QoJOMCMIWiKQbxcuvaNy0dnlg2gU9t570pys9HzPyhQvh6K
 # environment
-PATH = /opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+PATH = /opt/ros/humble/bin:/home/simi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
 # default
 MAKEFILES := 
 # environment
@@ -198,7 +197,7 @@ SNAP_ARCH = amd64
 # makefile
 .DEFAULT_GOAL := 
 # environment
-SYSTEMD_EXEC_PID = 2349
+SYSTEMD_EXEC_PID = 1839
 # environment
 DISPLAY = :0
 # environment
@@ -281,7 +280,10 @@ LC_IDENTIFICATION = pl_PL.UTF-8
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # variable set hash-table stats:
  
-# Load=133/1024=13%, Rehash=0, Collisions=11/160=7%
+Makefile:8: /make/project.mk: No such file or directory
+make: *** No rule to make target '/make/project.mk'.  Stop.
+
+# Load=134/1024=13%, Rehash=0, Collisions=12/161=7%
 
 # Pattern-specific Variable Values
 
@@ -289,9 +291,9 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # Directories
 
-# . (device 2050, inode 922402): 9 files, no impossibilities.
+# . (device 2050, inode 922402): 12 files, no impossibilities.
 
-# 9 files, no impossibilities in 1 directories.
+# 12 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -332,12 +334,12 @@ all:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 15 / storage = 143 B / avg = 9 B
-# current buf: size = 8162 B / used = 143 B / count = 15 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 18 / storage = 170 B / avg = 9 B
+# current buf: size = 8162 B / used = 170 B / count = 18 / avg = 9 B
 
-# strcache performance: lookups = 20 / hit rate = 25%
+# strcache performance: lookups = 23 / hit rate = 21%
 # hash-table stats:
-# Load=15/8192=0%, Rehash=0, Collisions=0/20=0%
-# Finished Make data base on Mon Jul 11 18:48:11 2022
+# Load=18/8192=0%, Rehash=0, Collisions=0/23=0%
+# Finished Make data base on Tue Jul 12 14:36:09 2022
 
  
