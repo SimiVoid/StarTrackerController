@@ -2,7 +2,9 @@
 #define __STEPPER_MOTOR_H__
 
 #include <stdint.h>
+#include <stddef.h>
 
+#include "esp_system.h"
 #include "main.h"
 
 enum stepper_motor_steps {
@@ -22,14 +24,20 @@ enum stepper_motor_mode {
 typedef struct {
     uint8_t step_config;
     uint8_t speed;
-    uint8_t dir;
+    /**
+     * int8_t dir
+     * -1: backward
+     * 0: stop
+     * 1: forward
+     */
+    int8_t dir;
 } __attribute__ ((packed)) stepper_motor_config_t;
 
 extern stepper_motor_config_t stepper_motor_config;
 
-void loadEEPROMConfig(void);
-void saveEEPROMConfig(void);
-void resetEEPROMConfig(void);
+esp_err_t loadConfig(void);
+esp_err_t saveConfig(void);
+esp_err_t resetConfig(void);
 
 void vTaskControlMotor(void* pvParameters);
 
