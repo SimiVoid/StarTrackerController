@@ -39,6 +39,10 @@ esp_err_t loadConfig(void);
 esp_err_t saveConfig(void);
 esp_err_t resetConfig(void);
 
+static void stepper_motor_config_init(void);
+static void stepper_motor_gpio_init(void);
+static void stepper_motor_change_config(void);
+
 void vTaskControlMotor(void* pvParameters);
 
 #endif
