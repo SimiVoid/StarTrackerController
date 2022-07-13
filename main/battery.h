@@ -3,8 +3,7 @@
 
 #include "main.h"
 
-extern float batteryVoltage;
-
 void vTaskBattery(void* pvParameters);
+float getBatteryVoltage(void) const;
 
 #endif // __BATTERY_H__

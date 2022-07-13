@@ -5,7 +5,7 @@
 #include "driver/adc.h"
 #include "esp_adc_cal.h"
 
-float batteryVoltage = 0.f;
+static float batteryVoltage = 0.f;
 
 void vTaskBattery(void* pvParameters) {
     #if BATTERY_ADC_UNIT == ADC_UNIT_1
@@ -36,4 +36,8 @@ void vTaskBattery(void* pvParameters) {
 
         vTaskDelay(pdMS_TO_TICKS(100));
     }
+}
+
+float getBatteryVoltage(void) const {
+    return batteryVoltage;
 }
