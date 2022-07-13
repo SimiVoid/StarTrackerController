@@ -4,6 +4,5 @@
 #include "main.h"
 
 void vTaskBattery(void* pvParameters);
-float getBatteryVoltage(void) const;
-
+float getBatteryVoltage(void);
 #endif // __BATTERY_H__

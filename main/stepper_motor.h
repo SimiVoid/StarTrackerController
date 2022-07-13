@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 #include <stddef.h>
+#include <stdbool.h>
 
 #include "esp_system.h"
 #include "main.h"
@@ -35,13 +36,11 @@ typedef struct {
 
 extern stepper_motor_config_t stepper_motor_config;
 
+bool stepper_motor_config_are_equal(stepper_motor_config_t* config1, stepper_motor_config_t* config2);
+
 esp_err_t loadConfig(void);
 esp_err_t saveConfig(void);
 esp_err_t resetConfig(void);
-
-static void stepper_motor_config_init(void);
-static void stepper_motor_gpio_init(void);
-static void stepper_motor_change_config(void);
 
 void vTaskControlMotor(void* pvParameters);
 

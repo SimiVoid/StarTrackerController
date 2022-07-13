@@ -5,7 +5,7 @@
 #include "driver/adc.h"
 #include "esp_adc_cal.h"
 
-static float batteryVoltage = 0.f;
+static float battery_voltage;
 
 void vTaskBattery(void* pvParameters) {
     #if BATTERY_ADC_UNIT == ADC_UNIT_1
@@ -15,6 +15,8 @@ void vTaskBattery(void* pvParameters) {
     #else
         #error "Invalid ADC unit"
     #endif
+
+    battery_voltage = 0.f;
 
     esp_adc_cal_characteristics_t adc_chars;
     esp_adc_cal_characterize(BATTERY_ADC_UNIT, ADC_ATTEN_DB_11, ADC_WIDTH_BIT_DEFAULT, 0, &adc_chars);
@@ -32,12 +34,12 @@ void vTaskBattery(void* pvParameters) {
             #error "Invalid ADC unit"
         #endif
 
-        batteryVoltage = esp_adc_cal_raw_to_voltage(raw_value, &adc_chars) * VOLTAGE_DIVIDER_RATIO / 1000.f;
+        battery_voltage = esp_adc_cal_raw_to_voltage(raw_value, &adc_chars) * VOLTAGE_DIVIDER_RATIO / 1000.f;
 
         vTaskDelay(pdMS_TO_TICKS(100));
     }
 }
 
-float getBatteryVoltage(void) const {
-    return batteryVoltage;
+float getBatteryVoltage(void) {
+    return battery_voltage;
 }

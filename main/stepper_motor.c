@@ -1,16 +1,29 @@
 #include "stepper_motor.h"
 
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
 #include "nvs_flash.h"
 #include "nvs.h"
 
+#define LOG_LOCAL_LEVEL ESP_LOG_VERBOSE
+#include "esp_log.h"
+
 stepper_motor_config_t stepper_motor_config;
+
+static const char* TAG = "stepper_motor";
+
+static void stepper_motor_config_init(void);
+static void stepper_motor_gpio_init(void);
+static void stepper_motor_gpio_config(void);
+static void stepper_motor_config_control(void);
 
 void vTaskControlMotor(void* pvParameters) {
     stepper_motor_config_init();
     stepper_motor_gpio_init();
+    stepper_motor_gpio_config();
 
     while (1) {
-
+        stepper_motor_config_control();
     }
 }
 
@@ -72,7 +85,7 @@ static void stepper_motor_config_init(void) {
         err = resetConfig();
 
         if (err != ESP_OK) {
-            ESP_LOG_ERROR("Failed to reset config");
+            ESP_LOGE(TAG, "Failed to reset config: %d", err);
         }
     }
 }
@@ -81,6 +94,21 @@ static void stepper_motor_gpio_init(void) {
 
 }
 
-static void stepper_motor_change_config(void) {
+static void stepper_motor_gpio_config(void) {
 
+}
+
+static void stepper_motor_config_control(void) {
+    static stepper_motor_config_t prev_config = {0};
+
+    if(!stepper_motor_config_are_equal(&prev_config, &stepper_motor_config)) {
+        stepper_motor_gpio_config();
+        prev_config = stepper_motor_config;
+    }
+}
+
+bool stepper_motor_config_are_equal(stepper_motor_config_t* config1, stepper_motor_config_t* config2) {
+    return config1->step_config == config2->step_config &&
+           config1->dir == config2->dir &&
+           config1->speed == config2->speed;
 }
