@@ -2,6 +2,7 @@
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "driver/gpio.h"
 #include "nvs_flash.h"
 #include "nvs.h"
 
@@ -10,7 +11,7 @@
 
 stepper_motor_config_t stepper_motor_config;
 
-static const char* TAG = "stepper_motor";
+static const char* TAG = "steppergpio_config_t_motor";
 
 static void stepper_motor_config_init(void);
 static void stepper_motor_gpio_init(void);
@@ -91,7 +92,21 @@ static void stepper_motor_config_init(void) {
 }
 
 static void stepper_motor_gpio_init(void) {
+    gpio_pad_select_gpio(STEP_MOTOR_DIR_PIN);
+    gpio_pad_select_gpio(STEP_MOTOR_STEP_PIN);
+    gpio_pad_select_gpio(STEP_MOTOR_ENABLE_PIN);
+    gpio_pad_select_gpio(STEP_MOTOR_DIAG_PIN);
+    gpio_pad_select_gpio(STEP_MOTOR_CFG_CS1_PIN);
+    gpio_pad_select_gpio(STEP_MOTOR_CFG_CS2_PIN);
+    gpio_pad_select_gpio(STEP_MOTOR_CFG_SPREAD_PIN);
 
+    gpio_set_direction(STEP_MOTOR_DIR_PIN, GPIO_MODE_OUTPUT);
+    gpio_set_direction(STEP_MOTOR_STEP_PIN, GPIO_MODE_OUTPUT);
+    gpio_set_direction(STEP_MOTOR_ENABLE_PIN, GPIO_MODE_OUTPUT);
+    gpio_set_direction(STEP_MOTOR_DIAG_PIN, GPIO_MODE_OUTPUT);
+    gpio_set_direction(STEP_MOTOR_CFG_CS1_PIN, GPIO_MODE_OUTPUT);
+    gpio_set_direction(STEP_MOTOR_CFG_CS2_PIN, GPIO_MODE_OUTPUT);
+    gpio_set_direction(STEP_MOTOR_CFG_SPREAD_PIN, GPIO_MODE_OUTPUT);
 }
 
 static void stepper_motor_gpio_config(void) {

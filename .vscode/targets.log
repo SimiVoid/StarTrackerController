@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jul 13 22:10:30 2022
+# Make data base, printed on Sat Jul 23 14:16:21 2022
 
 # Variables
 
@@ -27,11 +27,13 @@ SNAP_INSTANCE_KEY =
 # makefile (from 'Makefile', line 6)
 PROJECT_NAME := StarTrackerController
 # environment
+GJS_DEBUG_OUTPUT = stderr
+# environment
 LC_NAME = pl_PL.UTF-8
 # environment
 LC_NUMERIC = pl_PL.UTF-8
 # environment
-VSCODE_CWD = /home/simi/Documents/Projects
+VSCODE_CWD = /home/simi
 # environment
 LC_ADDRESS = pl_PL.UTF-8
 # default
@@ -67,13 +69,11 @@ VSCODE_CODE_CACHE_PATH = /home/simi/.config/Code/CachedData/b06ae3b2d2dbfe28bca3
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.PA82O1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.KKTCP1
 # default
 .LOADED := 
 # default
 .INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
-# environment
-GNOME_TERMINAL_SERVICE = :1.100
 # makefile
 MAKEFLAGS = prR
 # makefile
@@ -105,13 +105,15 @@ SNAP_REEXEC =
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 18918
+VSCODE_PID = 3023
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/expertbook:@/tmp/.ICE-unix/1816,unix/expertbook:/tmp/.ICE-unix/1816
+BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
+# environment
+SESSION_MANAGER = local/expertbook:@/tmp/.ICE-unix/1831,unix/expertbook:/tmp/.ICE-unix/1831
 # automatic
 *F = $(notdir $*)
 # environment
@@ -137,21 +139,23 @@ XMODIFIERS = @im=ibus
 # environment
 LD_LIBRARY_PATH = /opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib
 # environment
-SHLVL = 1
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# environment
+SHLVL = 0
 # environment
 PICO_SDK_PATH = /home/simi/raspberry-pi-pico/pico/pico-sdk
-# environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/2c187a97_e613_414a_8aeb_c4dad6fe4f22
 # environment
 GCC_COLORS = error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01
 # environment
 MAKELEVEL := 0
+# environment
+IM_CONFIG_CHECK_ENV = 1
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
 SNAP_COOKIE = 3BuS1QoJOMCMIWiKQbxcuvaNy0dnlg2gU9t570pys9HzPyhQvh6K
 # environment
-PATH = /opt/ros/humble/bin:/home/simi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+PATH = /home/simi/.local/bin:/opt/ros/humble/bin:/home/simi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
 # default
 MAKEFILES := 
 # environment
@@ -164,6 +168,8 @@ SNAP_USER_COMMON = /home/simi/snap/code/common
 LC_TIME = pl_PL.UTF-8
 # environment
 SNAP = /snap/code/101
+# environment
+INVOCATION_ID = 2e34ac91b47c4e52b01dcff609952462
 # environment
 SNAP_REVISION = 101
 # environment
@@ -181,7 +187,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 XDG_CURRENT_DESKTOP = Unity
 # environment
-LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+LS_COLORS = 
 # automatic
 +F = $(notdir $+)
 # environment
@@ -193,11 +199,13 @@ GNUMAKEFLAGS :=
 # environment
 LOGNAME = simi
 # environment
+GIO_LAUNCHED_DESKTOP_FILE = /var/lib/snapd/desktop/applications/code_code.desktop
+# environment
 SNAP_ARCH = amd64
 # makefile
 .DEFAULT_GOAL := 
 # environment
-SYSTEMD_EXEC_PID = 1848
+SYSTEMD_EXEC_PID = 1866
 # environment
 DISPLAY = :0
 # environment
@@ -213,9 +221,15 @@ SNAP_DATA = /var/snap/code/101
 # environment
 SNAP_CONTEXT = 3BuS1QoJOMCMIWiKQbxcuvaNy0dnlg2gU9t570pys9HzPyhQvh6K
 # environment
+MANAGERPID = 1668
+# environment
 LC_MEASUREMENT = pl_PL.UTF-8
 # environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2933
+# environment
 PYTHONPATH = /opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages
+# environment
+_ = /snap/code/101/usr/share/code/code
 # environment
 LC_PAPER = pl_PL.UTF-8
 # environment
@@ -223,9 +237,9 @@ XDG_RUNTIME_DIR = /run/user/1000
 # environment
 ROS_LOCALHOST_ONLY = 0
 # environment
-COLORTERM = truecolor
-# environment
 GDK_PIXBUF_MODULE_FILE = /home/simi/snap/code/common/.cache/gdk-pixbuf-loaders.cache
+# environment
+JOURNAL_STREAM = 8:35996
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -238,8 +252,6 @@ QT_IM_MODULE = ibus
 ELECTRON_RUN_AS_NODE = 1
 # environment
 VSCODE_IPC_HOOK = /run/user/1000/vscode-bc4f9f2b-1.69.1-main.sock
-# environment
-TERM = xterm-256color
 # environment
 SNAP_NAME = code
 # environment
@@ -261,8 +273,6 @@ VSCODE_CLI = 1
 # environment
 ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
-VTE_VERSION = 6800
-# environment
 SNAP_COMMON = /var/snap/code/common
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
@@ -279,7 +289,7 @@ LC_IDENTIFICATION = pl_PL.UTF-8
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # variable set hash-table stats:
-# Load=134/1024=13%, Rehash=0, Collisions=12/161=7%
+# Load=139/1024=14%, Rehash=0, Collisions=5/166=3%
 
 # Pattern-specific Variable Values
 
@@ -340,6 +350,6 @@ all:
 # strcache performance: lookups = 23 / hit rate = 21%
 # hash-table stats:
 # Load=18/8192=0%, Rehash=0, Collisions=0/23=0%
-# Finished Make data base on Wed Jul 13 22:10:30 2022
+# Finished Make data base on Sat Jul 23 14:16:21 2022
 
  
