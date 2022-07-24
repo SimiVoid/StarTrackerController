@@ -5,4 +5,5 @@
 
 void vTaskBattery(void* pvParameters);
 float getBatteryVoltage(void);
+
 #endif // __BATTERY_H__

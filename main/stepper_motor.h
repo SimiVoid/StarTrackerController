@@ -21,6 +21,8 @@ enum stepper_motor_mode {
 };
 
 #define DEFAULT_STEPPER_MOTOR_STEPS_CONFIG STEPPER_MOTOR_STEPS_1_16 | STEPPER_MOTOR_MODE_SPREAD_CYCLE
+#define STORAGE_NAMESPACE "stepper_motor"
+#define STORAGE_KEY_CONFIG "config"
 
 typedef struct {
     uint8_t step_config;

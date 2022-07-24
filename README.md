@@ -14,3 +14,7 @@ To setup your computer use [official tutorial](https://docs.espressif.com/projec
 ## Building
 
 !!! *_Still in development_* !!!
+
+## Bluetooth communication protocol
+
+
